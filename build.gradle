@@ -1,0 +1,61 @@
+/**
+ * Gradle plugins
+ */
+plugins {
+    id 'com.gradleup.shadow' version '8.3.3'
+    id 'java'
+}
+
+/**
+ * Project Variables
+ */
+group = 'org.necrolix'
+version = '1.0.0'
+
+/**
+ * Path to the compiled Jar file
+ */
+def buildPath = System.getenv('BUILD_PATH') ?: 'build';
+def baseArchiveName = "${rootProject.name.capitalize()}";
+
+/**
+ * Repositories for project dependencies
+ */
+repositories {
+    mavenCentral()
+}
+
+/**
+ * Project Dependencies
+ */
+dependencies {
+    compileOnly 'org.jetbrains:annotations:26.0.1'
+
+    // Test
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+/**
+ * Project testing
+ */
+test {
+    useJUnitPlatform()
+}
+
+/**
+ * Creating a Jar file wrapper (core) to run a game server
+ */
+shadowJar {
+    archiveBaseName.set(baseArchiveName)
+    archiveClassifier.set('')
+
+    destinationDirectory.set(file(buildPath))
+
+    manifest {
+        attributes(
+                'Implementation-Title': rootProject.name.capitalize(),
+                'Implementation-Version': version,
+        )
+    }
+}
