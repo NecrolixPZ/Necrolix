@@ -16,6 +16,19 @@
 
 To run the server with this core, you must first install [JDK 17 or higher](https://www.oracle.com/java/technologies/downloads/).
 
+# Contribute
+
+We welcome any help in the development of this project! How can you help:
+
+- **Test** - install the loader and just play. Mods are not necessary to install, so you will help find hidden bugs. If
+  something turns up, please report it to [Issue](https://github.com/NecrolixPZ/Necrolix/issues) so that other developers know
+  what needs to be fixed.
+- **[Create plugins](https://github.com/search?q=necrolix&type=repositories)** - is a good way to develop our community and bring new functionality to the game.
+- **Take part in the development** - you can always create a fork and make corrections by sending them for
+  acceptance [pull request](https://github.com/NecrolixPZ/Necrolix/pulls).
+- **Join our community at [Discord](https://discord.gg/PdYtyJMTZN)** - we want to create a healthy community of
+  enthusiastic developers where everyone can learn something and find new friends.
+
 # License
 
 This project is licensed under [MIT License](./LICENSE).
