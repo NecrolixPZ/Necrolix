@@ -10,6 +10,8 @@
     <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/NecrolixPZ/Necrolix">
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/NecrolixPZ/Necrolix">
     <img alt="GitHub Release" src="https://img.shields.io/github/v/release/brov3r/Necrolix">
+    <a href="https://github.com/NecrolixPZ/Necrolix/actions/workflows/gradle.yml"><img alt="Java CI with Gradle" src="https://github.com/NecrolixPZ/Necrolix/actions/workflows/gradle.yml/badge.svg"></a>
+    <a href="https://github.com/NecrolixPZ/Necrolix/actions/workflows/codeql.yml"><img alt="CodeQL" src="https://github.com/NecrolixPZ/Necrolix/actions/workflows/codeql.yml/badge.svg"></a>
 </p>
 
 **Necrolix** - custom core of the Project Zomboid server, based on the ideas and operating principles of [Avrix Loader](https://github.com/Brov3r/Avrix), taking into account and correcting errors.
