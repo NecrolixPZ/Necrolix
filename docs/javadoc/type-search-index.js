@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"org.necrolix","l":"Launcher"},{"p":"org.necrolix","l":"Main"}];updateSearchResults();

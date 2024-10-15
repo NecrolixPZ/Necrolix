@@ -29,11 +29,15 @@ repositories {
  * Project Dependencies
  */
 dependencies {
-    compileOnly 'org.jetbrains:annotations:26.0.1'
+    // Project Zomboid libs
+    compileOnly files('libs/ProjectZomboid-core-41.78.16.jar')
+    compileOnly files('libs/ProjectZomboid-libs-41.78.16.jar')
+
+    // Utils
 
     // Test
     testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation('org.junit.jupiter:junit-jupiter')
 }
 
 /**
@@ -54,8 +58,61 @@ shadowJar {
 
     manifest {
         attributes(
+                'Main-Class': 'org.necrolix.Main',
                 'Implementation-Title': rootProject.name.capitalize(),
                 'Implementation-Version': version,
         )
+    }
+}
+
+/**
+ * Building a release Jars archive with documentation and sources
+ */
+tasks.register('releaseBuildJar') {
+    dependsOn javadocJar, sourceJar
+    finalizedBy buildJar
+}
+
+/**
+ * Building a Jar archive with documentation
+ */
+tasks.register('buildJar') {
+    finalizedBy shadowJar
+}
+
+/**
+ * Packaging source code in a Jar archive
+ */
+tasks.register('sourceJar', Jar) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    archiveBaseName.set(baseArchiveName)
+    archiveClassifier.set('sources')
+    from(sourceSets.main.allSource)
+    destinationDirectory.set(file(buildPath))
+}
+
+/**
+ * Creating javadoc in jar archive
+ */
+tasks.register('javadocJar', Jar) {
+    dependsOn(tasks.generateJavaDoc)
+    archiveBaseName.set(baseArchiveName)
+    archiveClassifier.set('javadoc')
+    from(file("docs/javadoc"))
+    destinationDirectory.set(file(buildPath))
+}
+
+/**
+ * Generating JavaDoc for Jar archive
+ */
+tasks.register('generateJavaDoc', Javadoc) {
+    source = sourceSets.main.allJava
+    classpath = sourceSets.main.compileClasspath
+    destinationDir = file("docs/javadoc")
+    options {
+        encoding = 'UTF-8'
+        charSet = 'UTF-8'
+        links("https://docs.oracle.com/en/java/javase/17/docs/api/")
+        memberLevel = JavadocMemberLevel.PUBLIC
     }
 }

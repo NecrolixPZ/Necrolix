@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"org.necrolix","c":"Launcher","l":"Launcher()","u":"%3Cinit%3E()"},{"p":"org.necrolix","c":"Main","l":"Main()","u":"%3Cinit%3E()"},{"p":"org.necrolix","c":"Launcher","l":"main(String[])","u":"main(java.lang.String[])"},{"p":"org.necrolix","c":"Main","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();
