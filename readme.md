@@ -1,12 +1,10 @@
 <div align="center">
     <h1>Necrolix</h1>
-    <img src="docs/Necrolix.png" height="256px" alt="Necrolix logo">
 </div>
 
 <p align="center">
     <img alt="Project Zomboid Version" src="https://img.shields.io/badge/Project_Zomboid-41.78.16-blue">
     <img alt="Java version" src="https://img.shields.io/badge/Java-17-orange">
-    <img alt="Necrolix Environment" src="https://img.shields.io/badge/Environment-server-green">
     <a href="https://discord.com/invite/PdYtyJMTZN"><img alt="Discord" src="https://img.shields.io/discord/1248698287997976656?logo=discord&logoColor=%23ffffff&logoSize=2&label=Discord&color=%235865F2"></a>
     <img alt="GitHub License" src="https://img.shields.io/github/license/NecrolixPZ/Necrolix">
     <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/NecrolixPZ/Necrolix">
