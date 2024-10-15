@@ -15,3 +15,7 @@
 **Necrolix** - custom core of the Project Zomboid server, based on the ideas and operating principles of [Avrix Loader](https://github.com/Brov3r/Avrix), taking into account and correcting errors.
 
 To run the server with this core, you must first install [JDK 17 or higher](https://www.oracle.com/java/technologies/downloads/).
+
+# License
+
+This project is licensed under [MIT License](./LICENSE).
